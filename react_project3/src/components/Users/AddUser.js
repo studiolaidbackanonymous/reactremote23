@@ -10,12 +10,15 @@ const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
     if (enteredUserName.trim().length === 0 || enteredAge.trim().length === 0) {
+      console.log("invalid");
       return;
     }
     if (+enteredAge < 1) {
+      console.log("invalid");
       return;
     }
-    console.log(`${enteredUserName} ${enteredAge}`);
+
+    props.onAddUser(enteredUserName, enteredAge);
 
     // two way binding
     setEnteredUsereName("");
