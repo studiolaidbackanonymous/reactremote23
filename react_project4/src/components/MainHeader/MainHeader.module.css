@@ -6,7 +6,7 @@
   height: 5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   background: #741188;
   padding: 0 2rem;
 }
